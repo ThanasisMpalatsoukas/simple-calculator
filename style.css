@@ -1,0 +1,142 @@
+body{
+	font-family: 'Montserrat', sans-serif;
+	background-color:#1e2326;
+}
+
+.container{
+	width:25%;
+	margin:0 auto;
+	height:100vh;
+}
+
+.calculator{
+	margin-top:50px;
+	width:100%;
+	height:750px;
+	box-shadow: -25px 30px 15px 5px rgba(0,0,0,0.3);
+}
+
+.buttons{
+	width:100%;
+	margin:0 auto;
+}
+
+.buttons .button-column:first-child .sign-style{
+	border-right:1px solid #7d5fff;
+}
+
+.button-column .main-style{
+		border-top:1px solid #23282b;
+	border-bottom:1px solid #23282b;
+	border-right:1px solid #23282b;
+}
+
+.main-style p{
+	align-self: center;
+}
+
+
+.button-column{
+	width:100%;
+	height:auto;
+	display: flex;
+	justify-content: center;
+	font-size: 1.25em;
+	color:#fff;
+	text-align: center;
+}
+
+.main-style{
+	display: flex;
+	justify-content: center;
+	width:25%;
+	background-color:#1e2326;
+	height:100px;
+	transition: 0.6s;
+}
+
+.main-style:hover{
+	transition: 0.6s;
+	background-color:#fec208;
+	cursor: pointer;
+	border-top:1px solid #1e2326;
+border-bottom:1px solid #1e2326;
+border-right:1px solid #1e2326;
+}
+
+.equal{
+	display: flex;
+	justify-content: center;
+	width:25%;
+	background-color:#5e4bb6;
+	height:100px;
+	border-bottom:1px solid #7d5fff;
+	border-top:1px solid #7d5fff;
+	transition: 0.6s;
+}
+
+.equal:hover{
+	transition: 0.6s;
+	background-color:#cd84f1;
+	cursor: pointer;
+}
+
+.equal p{
+	margin-top:0px;
+	align-self: center;
+	margin-bottom:0px;
+}
+
+.sign-style{
+	display: flex;
+	justify-content: center;
+	width:25%;
+	background-color:#5e4bb6;
+	height:100px;
+	border-bottom:1px solid #7d5fff;
+	border-top:1px solid #7d5fff;
+	transition: 0.6s;
+}
+
+.sign-style:hover{
+	transition: 0.6s;
+	background-color:#cd84f1;
+	cursor: pointer;
+}
+
+.sign-style p{
+	margin-top:0px;
+	align-self: center;
+	margin-bottom:0px;
+}
+
+.screen{
+	width:100%;height:240px;
+	background-color:#eaeaea;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+.screen .calculation{
+	opacity:0.7;
+	display: flex;
+	justify-content: center;
+	height:100px;
+	width:100%;
+}
+
+.screen .calculation p{
+	align-self:center;
+}
+
+.screen .result{
+	display: flex;
+	justify-content: center;
+	height:100px;
+	width:100%;
+}
+
+.screen .result p{
+	align-self:center;
+	font-size:1.5em;
+}
