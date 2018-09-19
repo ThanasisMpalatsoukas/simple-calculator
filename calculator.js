@@ -50,7 +50,7 @@ var calculator = (function(){
 	}
 
 	function addSign(){
-		console.log(calc);
+
 		if(digits!='' && numberAfterDot){
 			if(!deleteNumber){
 				calc.push( digits );
@@ -61,7 +61,7 @@ var calculator = (function(){
 			digits = '';
 			_render();
 		}
-		console.log(calc);
+	
 		deleteNumber = true;
 	}
 
@@ -72,9 +72,6 @@ var calculator = (function(){
 		calcString = String(calcString);
 		calcString = calcString.slice(0,-1);
 
-		console.log("entry calc: "+calc);
-		console.log("entry digits: "+digits);
-
 		if(	allTypes.includes( calc[calc.length - 1] )	&& digits == ''){
 			calc.splice(-1 , 1);
 			digits = calc[calc.length - 1];
@@ -82,7 +79,7 @@ var calculator = (function(){
 		else{
 			digits = String(digits);
 			digits = digits.slice(0,-1);
-			console.log(digits);
+
 			if(digits !=''){
 				calc.splice(-1 , 1);
 				calc.push(digits);
@@ -91,10 +88,6 @@ var calculator = (function(){
 				calc.splice(-1,1);
 			}
 		}
-		console.log("exit cacs: "+calc);
-		console.log(calc);
-		console.log("exit digits: "+digits);
-		console.log("");
 		deleteNumber = true;
 		_render();
 	}
@@ -119,18 +112,16 @@ var calculator = (function(){
 	}
 
  	function findResult(){
-		console.log(calc);
+
 		calc.push(digits);
 		while(calc.length > 1){
 			calc[0] = get_result(calc[0],calc[1],calc[2]);
 			calc.splice(1,2);
-			console.log(calc);
 		}
 		result[0].innerHTML = calc[0];
 		digits = calc[0];
 		calcString = calc[0];
 		calc.splice(0,1);
-		console.log(calc,digits);
 		_render();
 	}
 
