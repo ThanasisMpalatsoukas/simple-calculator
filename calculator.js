@@ -9,6 +9,7 @@ var calculator = (function(){
 	var addingNumber = true;
 	var numberAfterDot = true;
 	var backspaceNumber = false;
+	var deleteNumber = false;
 
 	//DOM elements
 	var calcScreen = 	document.getElementsByClassName('calculation')[0].querySelector('p');
@@ -36,7 +37,6 @@ var calculator = (function(){
 
 	//main
 	function addNumber(){
-
 		numberAfterDot = true;
 		var number = this.querySelector('p').innerHTML;
 
@@ -46,46 +46,56 @@ var calculator = (function(){
 		digits+=number;
 		calcString+= number;
 		_render();
+		deleteNumber = false;
 	}
 
 	function addSign(){
-
+		console.log(calc);
 		if(digits!='' && numberAfterDot){
-			calc.push( digits );
+			if(!deleteNumber){
+				calc.push( digits );
+			}
 			var sign = this.querySelector('p').innerHTML;
 			calc.push( sign );
 			calcString+=sign;
 			digits = '';
 			_render();
 		}
+		console.log(calc);
+		deleteNumber = true;
 	}
 
 	function delNum(){
-		if(digits!=''){
-				calc.push(digits);
+		if(!deleteNumber){
+			calc.push( digits	);
 		}
+		calcString = String(calcString);
 		calcString = calcString.slice(0,-1);
+
+		console.log("entry calc: "+calc);
+		console.log("entry digits: "+digits);
+
 		if(	allTypes.includes( calc[calc.length - 1] )	&& digits == ''){
-			calc.splice(calc.length - 1 , 1);
-			backspaceNumber = true;
+			calc.splice(-1 , 1);
+			digits = calc[calc.length - 1];
 		}
 		else{
-
-			if( backspaceNumber ){
-				digits = calc[calc.length - 1];
-
-			}
+			digits = String(digits);
 			digits = digits.slice(0,-1);
-			if( digits == ''	){
-				calc.splice(calc.length - 1 , 1);
-			}
-			else{
-				calc.splice(calc.length - 1 , 1);
+			console.log(digits);
+			if(digits !=''){
+				calc.splice(-1 , 1);
 				calc.push(digits);
 			}
-			backspaceNumber = false;
+			else{
+				calc.splice(-1,1);
+			}
 		}
-
+		console.log("exit cacs: "+calc);
+		console.log(calc);
+		console.log("exit digits: "+digits);
+		console.log("");
+		deleteNumber = true;
 		_render();
 	}
 
