@@ -1,22 +1,24 @@
 body{
 	font-family: 'Montserrat', sans-serif;
 	background-color:#1e2326;
+	height:100%;
 }
 
 .container{
-	width:25%;
+	width:23%;
 	margin:0 auto;
-	height:100vh;
+	height:650px;
 }
 
 .calculator{
 	margin-top:50px;
 	width:100%;
-	height:750px;
+	height:100%;
 	box-shadow: -25px 30px 15px 5px rgba(0,0,0,0.3);
 }
 
 .buttons{
+	height:68%;
 	width:100%;
 	margin:0 auto;
 }
@@ -38,7 +40,7 @@ body{
 
 .button-column{
 	width:100%;
-	height:auto;
+	height:20%;
 	display: flex;
 	justify-content: center;
 	font-size: 1.25em;
@@ -51,7 +53,7 @@ body{
 	justify-content: center;
 	width:25%;
 	background-color:#1e2326;
-	height:100px;
+	height:100%;
 	transition: 0.6s;
 }
 
@@ -69,7 +71,7 @@ border-right:1px solid #1e2326;
 	justify-content: center;
 	width:25%;
 	background-color:#5e4bb6;
-	height:100px;
+	height:100%;
 	border-bottom:1px solid #7d5fff;
 	border-top:1px solid #7d5fff;
 	transition: 0.6s;
@@ -92,7 +94,7 @@ border-right:1px solid #1e2326;
 	justify-content: center;
 	width:25%;
 	background-color:#5e4bb6;
-	height:100px;
+	height:100%;
 	border-bottom:1px solid #7d5fff;
 	border-top:1px solid #7d5fff;
 	transition: 0.6s;
@@ -111,7 +113,7 @@ border-right:1px solid #1e2326;
 }
 
 .screen{
-	width:100%;height:240px;
+	width:100%;height:50%;
 	background-color:#eaeaea;
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
@@ -121,7 +123,7 @@ border-right:1px solid #1e2326;
 	opacity:0.7;
 	display: flex;
 	justify-content: center;
-	height:100px;
+	height:100%;
 	width:100%;
 }
 
@@ -132,7 +134,7 @@ border-right:1px solid #1e2326;
 .screen .result{
 	display: flex;
 	justify-content: center;
-	height:100px;
+	height:100%;
 	width:100%;
 }
 
